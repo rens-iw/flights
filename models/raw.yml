@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: flights
+    database: flights  
+    schema: raw  
+    tables:
+      - name: dim_airline
+      - name: dim_airport
+      - name: fact_flights
