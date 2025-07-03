@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: flights
-    database: flights  
-    schema: raw  
+    database: flights_dev 
+    schema: O1_raw  
     tables:
       - name: dim_airline
       - name: dim_airport
