@@ -30,6 +30,8 @@ models:
     columns:
       - name: airline_name
         description: "Name of the operating airline"
+        tests:
+          - not_null
 
       - name: origin_airport_name
         description: "Full name of the origin airport"
