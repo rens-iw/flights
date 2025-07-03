@@ -17,10 +17,10 @@ aggregated as (
         dest_airport_name,
         distance_category,
         count(*) as total_flights,
-        round(avg(dep_delay), 3) as avg_dep_delay,
-        round(avg(arr_delay), 3) as avg_arr_delay,
-        round(avg(distance), 3) as avg_distance,
-        round(avg(air_time), 3) as avg_air_time,
+        round(avg(dep_delay), 2) as avg_dep_delay,
+        round(avg(arr_delay), 2) as avg_arr_delay,
+        round(avg(distance), 2) as avg_distance,
+        round(avg(air_time), 2) as avg_air_time,
         -- % of flights delayed more than 15 mins
         round(100.0 * sum(case when arr_delay > 15 then 1 else 0 end) / count(*), 2) as percent_delayed_flights
     from filtered_flights
