@@ -16,7 +16,7 @@ aggregated as (
         origin_airport_name,
         dest_airport_name,
         distance_category,
-        --count(*) as total_flights,
+        count(*) as total_flights,
         round(avg(dep_delay), 2) as avg_dep_delay,
         round(avg(arr_delay), 2) as avg_arr_delay,
         round(avg(distance), 2) as avg_distance,
