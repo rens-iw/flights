@@ -8,3 +8,11 @@ sources:
       - name: dim_airline
       - name: dim_airport
       - name: fact_flights
+
+  - name: flights_prod
+    database: flights_prod
+    schema: O1_raw  
+    tables:
+      - name: dim_airline
+      - name: dim_airport
+      - name: fact_flights
