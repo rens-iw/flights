@@ -18,6 +18,7 @@ aggregated as (
         distance_category,
         count(*) as total_flights,
         round(avg(dep_delay), 2) as avg_dep_delay,
+        round(max(dep_delay), 2) as max_dep_delay,
         round(avg(arr_delay), 2) as avg_arr_delay,
         round(avg(distance), 2) as avg_distance,
         round(avg(air_time), 2) as avg_air_time,
