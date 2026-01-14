@@ -8,9 +8,13 @@
     {%- elif target.name == 'ci' -%}
         {{ default_schema }}
 
+    {%- elif target.name == 'dev' -%}
+        {{ default_schema }}_{{ target.user | trim }}
+
     {%- else -%}
         {{ custom_schema_name | trim }}
 
     {%- endif -%}
 
 {%- endmacro %}
+
