@@ -6,7 +6,7 @@ source as (
 
 renamed as (
     select
-        transactionid as transaction_id
+        transactionid as transaction_id,
         dayofweek as day_of_week,
         flightdate as flight_date,
         upper(trim(airlineid)) as airline_id,
