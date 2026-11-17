@@ -1,0 +1,19 @@
+models:
+  - name: clean_fact_flights
+    columns:
+      - name: transaction_id
+        tests:
+          - unique
+          - not_null
+      - name: day_of_week
+        tests:
+          - not_null
+      - name: flight_date
+        tests:
+          - not_null
+      - name: airline_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('clean_dim_airline')
+                field: airline_id
