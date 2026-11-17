@@ -9,7 +9,7 @@ source as (
 renamed as (
 
     select
-        upper(trim(airlineid)) as airline_id,
+        upper(trim(airlineid)) as airline_id
         upper(trim(airlinename)) as airline_name
 
     from source
